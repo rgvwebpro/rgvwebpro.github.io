@@ -1,8 +1,14 @@
+# Jekyll configuration
 title: RGVWEBPRO
 description: Documentation
 theme: just-the-docs
 
+# site settings
 url: https://rgvwebpro.github.io
 
+# style
+color_scheme: dark
+
+# aux links
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
