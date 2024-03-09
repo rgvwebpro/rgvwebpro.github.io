@@ -1,6 +1,7 @@
 # Jekyll configuration
 title: RGVWEBPRO
-description: Documentation
+description: >- # this means to ignore newlines until "baseurl:"
+  Docs
 logo: "/assets/img/logo.png"
 theme: just-the-docs
 
@@ -12,4 +13,4 @@ color_scheme: dark
 
 # aux links
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  GitHub: https://github.com/rgvwebpro
