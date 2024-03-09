@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # just-the-docs-template
 
 This is a *bare-minimum* template to create a [Jekyll] site that:
@@ -172,3 +173,6 @@ The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party 
 [MIT License]: https://en.wikipedia.org/wiki/MIT_License
 [starter workflows]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
 [actions/starter-workflows]: https://github.com/actions/starter-workflows/blob/main/LICENSE
+=======
+# rgvwebpro.github.io
+>>>>>>> 7270080 (Init commit)
