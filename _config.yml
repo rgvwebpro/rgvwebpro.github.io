@@ -1,6 +1,7 @@
 # Jekyll configuration
 title: RGVWEBPRO
 description: Documentation
+logo: "/assets/img/logo.png"
 theme: just-the-docs
 
 # site settings
