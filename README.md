@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # just-the-docs-template
 
 This is a *bare-minimum* template to create a [Jekyll] site that:
@@ -55,7 +54,7 @@ Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key inst
 
 ## Publishing your site on GitHub Pages
 
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+1. If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
 
     ```yaml
     title: YOUR TITLE
@@ -68,9 +67,9 @@ Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key inst
       Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
     ```
 
-2.  Push your updated `_config.yml` to your site on GitHub.
+2. Push your updated `_config.yml` to your site on GitHub.
 
-3.  In your newly created repo on GitHub:
+3. In your newly created repo on GitHub:
     - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
     - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
 
@@ -78,11 +77,11 @@ Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key inst
 
 Assuming [Jekyll] and [Bundler] are installed on your computer:
 
-1.  Change your working directory to the root directory of your site.
+1. Change your working directory to the root directory of your site.
 
-2.  Run `bundle install`.
+2. Run `bundle install`.
 
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
+3. Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
 
     The built site is stored in the directory `_site`.
 
@@ -102,15 +101,15 @@ You might want to maintain your docs in an existing project repo. Instead of cre
 
 ### Copy the template files
 
-1.  Create a `.github/workflows` directory at your project root if your repo doesn't already have one. Copy the `pages.yml` file into this directory. GitHub Actions searches this directory for workflow files.
+1. Create a `.github/workflows` directory at your project root if your repo doesn't already have one. Copy the `pages.yml` file into this directory. GitHub Actions searches this directory for workflow files.
 
-2.  Create a `docs` directory at your project root and copy all remaining template files into this directory.
+2. Create a `docs` directory at your project root and copy all remaining template files into this directory.
 
 ### Modify the GitHub Actions workflow
 
 The GitHub Actions workflow that builds and deploys your site to Github Pages is defined by the `pages.yml` file. You'll need to edit this file to that so that your build and deploy steps look to your `docs` directory, rather than the project root.
 
-1.  Set the default `working-directory` param for the build job.
+1. Set the default `working-directory` param for the build job.
 
     ```yaml
     build:
@@ -120,7 +119,7 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
           working-directory: docs
     ```
 
-2.  Set the `working-directory` param for the Setup Ruby step.
+2. Set the `working-directory` param for the Setup Ruby step.
 
     ```yaml
     - name: Setup Ruby
@@ -132,7 +131,7 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
           working-directory: '${{ github.workspace }}/docs'
     ```
 
-3.  Set the path param for the Upload artifact step:
+3. Set the path param for the Upload artifact step:
 
     ```yaml
     - name: Upload artifact
@@ -141,7 +140,7 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
           path: "docs/_site/"
     ```
 
-4.  Modify the trigger so that only changes within the `docs` directory start the workflow. Otherwise, every change to your project (even those that don't affect the docs) would trigger a new site build and deploy.
+4. Modify the trigger so that only changes within the `docs` directory start the workflow. Otherwise, every change to your project (even those that don't affect the docs) would trigger a new site build and deploy.
 
     ```yaml
     on:
@@ -160,8 +159,6 @@ The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party 
 
 ----
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
 [Jekyll]: https://jekyllrb.com
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
 [GitHub Pages]: https://docs.github.com/en/pages
@@ -173,6 +170,3 @@ The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party 
 [MIT License]: https://en.wikipedia.org/wiki/MIT_License
 [starter workflows]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
 [actions/starter-workflows]: https://github.com/actions/starter-workflows/blob/main/LICENSE
-=======
-# rgvwebpro.github.io
->>>>>>> 7270080 (Init commit)
